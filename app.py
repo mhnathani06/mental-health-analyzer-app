@@ -25,8 +25,10 @@ def predict_anxiety_depression(text):
     # Determine if there are indications of anxiety/depression
     if scores['compound'] <= -0.05:
         return 'Positive for Anxiety/Depression😭' 
+        return image = Image.open("sad.jpg")
     else:
         return 'No Indications of Anxiety/Depression😍'
+        return image = Image.open("happy.jpg")
 
 # Streamlit app
 def main():
