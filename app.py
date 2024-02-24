@@ -40,14 +40,14 @@ def main():
     st.title("Mental Health Analyzer")
     st.write("Welcome to the Mental Health Analyzer. Enter a sentence to analyze for indications of anxiety/depression.")
 
-
     # Text input box
     user_input = st.text_area("Enter your sentence:")
 
     # Analyze button
     if st.button("Analyze"):
-        result = predict_anxiety_depression(user_input)
-        st.write(f"**Result:** {result}")
+        result_label, result_image = predict_anxiety_depression(user_input)
+        st.write(f"**Result:** {result_label}")
+        st.image(result_image, caption=result_label, use_column_width=True)
 
     # About section
     st.sidebar.title("About")
