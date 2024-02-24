@@ -24,11 +24,11 @@ def predict_anxiety_depression(text):
     scores = sid.polarity_scores(text)
     # Determine if there are indications of anxiety/depression
     if scores['compound'] <= -0.05:
-        return 'Positive for Anxiety/Depression😭' 
-        return image = Image.open("sad.jpg")
+        image = Image.open("sad.jpg")
+        return 'Positive for Anxiety/Depression😭', image
     else:
-        return 'No Indications of Anxiety/Depression😍'
-        return image = Image.open("happy.jpg")
+        image = Image.open("happy.jpg")
+        return 'No Indications of Anxiety/Depression😍', image
 
 # Streamlit app
 def main():
