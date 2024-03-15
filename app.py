@@ -45,7 +45,6 @@ def main():
     if st.button("Analyze"):
         result_label, result_image = predict_anxiety_depression(user_input)
         st.write(f"**Result:** {result_label}")
-        st.image(result_image, caption=result_label, use_column_width=True)
 
     # About section
     st.sidebar.title("About")
