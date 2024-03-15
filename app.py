@@ -43,7 +43,7 @@ def main():
 
     # Analyze button
     if st.button("Analyze"):
-        result_label, result_image = predict_anxiety_depression(user_input)
+        result_label = predict_anxiety_depression(user_input)
         st.write(f"**Result:** {result_label}")
 
     # About section
